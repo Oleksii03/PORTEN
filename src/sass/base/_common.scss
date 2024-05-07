@@ -1,0 +1,88 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+
+// -----------------------------------
+// * {
+//   overscroll-behavior: none;
+// }
+
+// ::-webkit-scrollbar {
+//   width: 0px;
+// }
+
+// @media (min-width: 1200px) {
+//   ::-webkit-scrollbar {
+//     width: 12px;
+//   }
+
+//   ::-webkit-scrollbar-track {
+//     background: var(--black-background-color);
+//   }
+
+//   ::-webkit-scrollbar-thumb {
+//     background-color: #e2ae1057;
+//     border-radius: 16px;
+//     border: 5px solid var(--black-background-color);
+//   }
+// }
+
+// ----------------------------------------
+
+// @font-face {
+//   font-family: GWENT;
+//   src: url(../fonts/GWENT-font.ttf);
+// }
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: var(--white-base-color);
+}
+
+ul,
+ol,
+li,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+
+button {
+  cursor: pointer;
+  padding: 0;
+  line-height: 0;
+  border: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+body {
+  // line-height: calc(lh / fs);
+
+  font-family: var(--primary-font);
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--white-base-color);
+  letter-spacing: 0.15px;
+}
+
+.is-freeze {
+  overflow: hidden;
+}

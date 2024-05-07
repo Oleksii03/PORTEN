@@ -27,10 +27,10 @@
 
 // ----------------------------------------
 
-// @font-face {
-//   font-family: GWENT;
-//   src: url(../fonts/GWENT-font.ttf);
-// }
+@font-face {
+  font-family: "Post No Bills Jaffna";
+  src: url(../fonts/PostNoBillsJaffna-Bold.woff);
+}
 
 html {
   scroll-behavior: smooth;
@@ -73,14 +73,19 @@ p {
   margin: 0;
 }
 
-body {
-  // line-height: calc(lh / fs);
+.wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
 
-  // font-family: var(--primary-font);
-  font-size: 16px;
-  font-weight: 800;
-  // color: var(--white-base-color);
-  letter-spacing: 0.15px;
+body {
+  font-family: var(--primary-font);
+  font-size: 14px;
+  line-height: 150%;
+  color: var(--white-base-color);
+
+  background-color: var(--black-background-color);
 }
 
 .is-freeze {

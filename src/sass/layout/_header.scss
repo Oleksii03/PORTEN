@@ -116,6 +116,11 @@
 // header--bottom---------
 .header__wrapper-bottom {
   background-color: var(--dark-gray-background-color);
+  padding: 5px 0px;
+
+  @media (min-width: 768px) {
+    padding: 0px 0px;
+  }
 }
 
 .header__logo {
@@ -147,7 +152,6 @@
 .bottom-list {
   display: flex;
   align-items: center;
-  // column-gap: 17px;
 }
 
 .bottom-list__link {

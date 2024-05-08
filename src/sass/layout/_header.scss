@@ -31,17 +31,27 @@
   font-size: 12px;
 }
 
+.top-list__item:not(:first-child) {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: flex;
+  }
+}
+
 .top-list__item:not(:last-child) {
-  &::after {
-    content: '';
-    position: absolute;
-    top: 6px;
-    right: -16px;
+  @media (min-width: 768px) {
+    &::after {
+      content: '';
+      position: absolute;
+      top: 6px;
+      right: -16px;
 
-    width: 1px;
-    height: 10px;
+      width: 1px;
+      height: 10px;
 
-    background-color: var(--gray-base-color);
+      background-color: var(--gray-base-color);
+    }
   }
 }
 

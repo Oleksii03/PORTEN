@@ -144,7 +144,32 @@
 .bottom-list {
   display: flex;
   align-items: center;
-  column-gap: 17px;
+  // column-gap: 17px;
+}
+
+.bottom-list__link {
+  color: var(--gray-base-color);
+  display: block;
+
+  font-size: 14px;
+  line-height: normal;
+  text-transform: uppercase;
+
+  padding: 20px 10px;
+
+  transition: all 250ms linear;
+
+
+  @media (min-width: 1024px) {
+    &:hover {
+      background: #1F1F1F;
+      color: var(--white-base-color);
+    }
+  }
+
+  @media (min-width: 1440px) {
+    padding: 30px 20px;
+  }
 }
 
 // header-bottom__btn-box--

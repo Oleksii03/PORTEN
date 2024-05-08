@@ -3,11 +3,11 @@
 }
 
 .season__content-top {
-  display: grid;
+  // display: grid;
 
-  @media (min-width: 768px) {
-    grid-template-columns: 1fr 1fr;
-  }
+  // @media (min-width: 768px) {
+  //   grid-template-columns: 1fr 1fr;
+  // }
 }
 
 .season__21-22 {
@@ -22,15 +22,28 @@
   line-height: normal;
   text-transform: uppercase;
 
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 
   @media (min-width: 768px) {
     font-size: 36px;
   }
 }
 
-.season__list-watches {
+.watches-list {
   padding: 0px 20px;
+
+  scroll-snap-type: x mandatory;
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  padding-bottom: 8px;
+
+  overflow-x: auto;
+}
+
+.watches-list__item {
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
 }
 
 .watches-list__link {
@@ -63,11 +76,11 @@
   height: 264px;
 }
 
-.season__new-collection {
-  height: 730px;
-  // width: 880px;
-  background-image: url(../images/season/season-img-top.png);
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-size: contain;
-}
+// .season__new-collection {
+//   height: 730px;
+//   // width: 880px;
+//   background-image: url(../images/season/season-img-top.png);
+//   background-repeat: no-repeat;
+//   background-position: 0 0;
+//   background-size: contain;
+// }

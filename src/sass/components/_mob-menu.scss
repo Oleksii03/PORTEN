@@ -45,33 +45,6 @@
   line-height: 0;
 }
 
-.mob-menu__icon {
-  display: flex;
-  margin-left: auto;
-  background-color: transparent;
-  margin-left: 12px;
-
-  @media (min-width: 768px) {
-    width: 60px;
-  }
-}
-
-.mob-menu__btn_open {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background-color: transparent;
-
-  border: none;
-  margin-left: auto;
-  cursor: pointer;
-
-  @media screen and (min-width: 1440px) {
-    display: none;
-  }
-}
-
 .mob-menu_container {
   position: relative;
 }
@@ -80,6 +53,8 @@
   position: absolute;
   top: 8px;
   right: 8px;
+
+  padding: 8px;
 
   display: flex;
   align-items: center;

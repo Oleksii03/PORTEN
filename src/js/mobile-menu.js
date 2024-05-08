@@ -10,6 +10,7 @@ openMenuBtn.addEventListener("click", toggleMenu);
 closeMenuBtn.addEventListener("click", toggleMenu);
 
 function toggleMenu () {
+  document.body.classList.toggle('to-freeze');
   menu.classList.toggle("is-hidden");
   backdrop.classList.toggle("backdrop--hidden");
 }

@@ -7,9 +7,9 @@
 }
 
 .season__content-top {
-
   @media (min-width: 1440px) {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
   }
 }
 
@@ -38,10 +38,18 @@
   scroll-snap-type: x mandatory;
   display: flex;
   align-items: center;
+  justify-content: center;
+
   column-gap: 20px;
   padding-bottom: 8px;
 
   overflow-x: auto;
+
+  @media (min-width: 768px) and (max-width: 869px) {
+    overflow: visible;
+    column-gap: 10px;
+    padding: 0px 0px;
+  }
 }
 
 .watches-list__item {
@@ -56,6 +64,10 @@
   margin-bottom: 25px;
 
   background: #191B1C;
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    padding: 17px 12px 24px;
+  }
 }
 
 .watches-list__text {
@@ -86,4 +98,12 @@
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
+
+  @media (min-width: 870px) {
+    background-size: cover;
+  }
+
+  @media (min-width: 1440px) {
+    background-size: contain;
+  }
 }

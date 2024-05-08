@@ -27,6 +27,8 @@
 
 .top-list__item {
   position: relative;
+  color: var(--gray-base-color);
+  font-size: 12px;
 }
 
 .top-list__item:not(:last-child) {
@@ -56,20 +58,30 @@
 .top-list__link {
   color: var(--gray-base-color);
   font-size: 12px;
-
 }
 
+// --header-btn-box---
 
-// --registration-box---
-
-.registration-box {
+.header__btn-box {
   display: flex;
   align-items: center;
-  column-gap: 19px;
+  column-gap: 4px;
   margin-left: auto;
+
+  &>span {
+    color: var(--gray-base-color);
+    font-size: 12px;
+  }
 }
 
 // ----header-btn-box--
+
+.header__btn-log-in {
+  display: flex;
+  align-items: center;
+  column-gap: 19px;
+  background-color: transparent;
+}
 
 .header__btn-log-in,
 .header__btn-sign-up {

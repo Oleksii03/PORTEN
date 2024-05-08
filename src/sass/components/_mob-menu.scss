@@ -1,14 +1,14 @@
-.mob-menu__wrapper {
-  @media (min-width: 768px) {
-    display: none;
-  }
-}
+// .mob-menu__wrapper {
+//   @media (min-width: 768px) {
+//     display: none;
+//   }
+// }
 
 .mob-menu {
   width: 100vw;
   height: 100dvh;
+
   position: fixed;
-  background-color: #fff;
   top: 0;
   right: 0;
   padding: 52px 10px 20px 20px;

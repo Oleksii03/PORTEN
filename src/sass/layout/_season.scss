@@ -1,13 +1,16 @@
 .season {
   // padding: 80px 0px;
+
+  ::-webkit-scrollbar {
+    width: 0px;
+  }
 }
 
 .season__content-top {
-  // display: grid;
 
-  // @media (min-width: 768px) {
-  //   grid-template-columns: 1fr 1fr;
-  // }
+  @media (min-width: 1440px) {
+    display: flex;
+  }
 }
 
 .season__21-22 {
@@ -76,11 +79,11 @@
   height: 264px;
 }
 
-// .season__new-collection {
-//   height: 730px;
-//   // width: 880px;
-//   background-image: url(../images/season/season-img-top.png);
-//   background-repeat: no-repeat;
-//   background-position: 0 0;
-//   background-size: contain;
-// }
+.season__new-collection {
+  height: 730px;
+  width: 100%;
+  background-image: url(../images/season/season-img-top.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}

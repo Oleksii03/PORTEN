@@ -1,0 +1,2 @@
+const e=document.querySelector("[data-menu-open]"),t=document.querySelector("[data-menu-close]"),o=document.querySelector("[data-menu]"),c=document.querySelector("[data-backdrop]");function d(){document.body.classList.toggle("to-freeze"),o.classList.toggle("is-hidden"),c.classList.toggle("backdrop--hidden")}console.log(c),e.addEventListener("click",d),t.addEventListener("click",d);
+//# sourceMappingURL=index.01d0d6ca.js.map

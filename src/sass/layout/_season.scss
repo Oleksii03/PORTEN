@@ -1,0 +1,67 @@
+.season {
+  // padding: 80px 0px;
+}
+
+.season__content-top {
+  display: grid;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.season__21-22 {
+  padding: 80px 0px;
+}
+
+.season__list-watches {
+  padding: 0px 20px;
+}
+
+.watches-list__link {
+  display: block;
+  max-width: 260px;
+  padding: 27px 22px 34px;
+  margin-bottom: 25px;
+
+  background: #191B1C;
+}
+
+.watches-list__text {
+  font-family: "Playfair Display";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+  margin-bottom: 10px;
+}
+
+.season__title {
+  text-align: center;
+  font-family: "Playfair Display";
+  font-size: 26px;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+
+  margin-bottom: 50px;
+
+  @media (min-width: 768px) {
+    font-size: 36px;
+  }
+}
+
+.watches-list__img {
+  width: 215px;
+  height: 264px;
+}
+
+.season__new-collection {
+  height: 730px;
+  // width: 880px;
+  background-image: url(../images/season/season-img-top.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}

@@ -2,12 +2,28 @@
   background-color: var(--black-background-color);
 
   ::-webkit-scrollbar {
-    width: 0px;
+    height: 0px;
+  }
+
+  @media (min-width: 1024px) and (max-width: 1699px) {
+    ::-webkit-scrollbar {
+      height: 3px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--dark-gray-background-color);
+      border-radius: 8px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: var(--white-base-color);
+      border-radius: 8px;
+    }
   }
 }
 
 .season__content-top {
-  @media (min-width: 1700px) {
+  @media (min-width: 1024px) {
     display: grid;
     grid-template-columns: repeat(2, 50%);
   }
@@ -18,7 +34,7 @@
 }
 
 .season__21-22 {
-  padding: 80px 0px;
+  padding: 40px 0px;
 
   @media (min-width: 1920px) {
     padding: 93px 80px;
@@ -38,6 +54,10 @@
 
   @media (min-width: 768px) {
     font-size: 36px;
+  }
+
+  @media (min-width: 1024px) and (max-width: 1699px) {
+    margin-bottom: 30px;
   }
 
   @media (min-width: 1920px) {
@@ -73,11 +93,15 @@
     justify-content: center;
     column-gap: 10px;
     padding: 0px 0px;
+    width: 300px;
+    margin: 0 auto;
   }
 
   @media (min-width: 1024px) and (max-width: 1699px) {
+    overflow-x: auto;
+    justify-content: start;
     column-gap: 50px;
-    padding: 0px
+    padding: 0px 50px;
   }
 
   @media (min-width: 1920px) {
@@ -89,6 +113,10 @@
 .watches-list__item {
   scroll-snap-align: center;
   scroll-snap-stop: always;
+
+  @media (min-width: 1024px) and (max-width: 1699px) {
+    padding-bottom: 30px;
+  }
 }
 
 .watches-list__link {
@@ -187,11 +215,15 @@
   }
 
   @media (min-width: 768px) {
-    padding: 484px 100px 50px;
+    background-size: cover;
   }
 
-  @media (min-width: 768px) {
-    background-size: cover;
+  @media (min-width: 1024px) {
+    padding-bottom: 10px;
+  }
+
+  @media (min-width: 1700px) {
+    padding: 484px 100px 50px;
   }
 }
 

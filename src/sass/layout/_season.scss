@@ -1,4 +1,5 @@
 .season {
+  background-color: var(--black-background-color);
   // padding: 80px 0px;
 
   ::-webkit-scrollbar {
@@ -11,13 +12,22 @@
     display: grid;
     grid-template-columns: repeat(2, 50%);
   }
+
+  @media (min-width: 1920px) {
+    grid-template-columns: 1fr 880px;
+  }
 }
 
 .season__21-22 {
   padding: 80px 0px;
+
+  @media (min-width: 1920px) {
+    padding: 93px 80px;
+  }
 }
 
 .season__title {
+  position: relative;
   text-align: center;
   font-family: "Playfair Display";
   font-size: 26px;
@@ -30,6 +40,21 @@
   @media (min-width: 768px) {
     font-size: 36px;
   }
+
+  @media (min-width: 1920px) {
+    margin-bottom: 100px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      height: 1px;
+      background-color: var(--white-base-color);
+    }
+  }
 }
 
 .watches-list {
@@ -38,17 +63,22 @@
   scroll-snap-type: x mandatory;
   display: flex;
   align-items: center;
-  justify-content: center;
 
   column-gap: 20px;
   padding-bottom: 8px;
 
   overflow-x: auto;
 
-  @media (min-width: 768px) and (max-width: 869px) {
+  @media (min-width: 768px) and (max-width: 1439px) {
     overflow: visible;
+    justify-content: center;
     column-gap: 10px;
     padding: 0px 0px;
+  }
+
+  @media (min-width: 1920px) {
+    column-gap: 50px;
+    padding: 0px
   }
 }
 
@@ -97,13 +127,19 @@
   background-image: url(../images/season/season-img-top.png);
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-size: contain;
+  background-size: cover;
 
-  @media (min-width: 870px) {
-    background-size: cover;
-  }
+  // @media (min-width: 870px) {
+  //   background-size: cover;
+  // }
 
-  @media (min-width: 1440px) {
-    background-size: contain;
-  }
+  // @media (min-width: 1440px) {
+  //   background-size: contain;
+  // }
+}
+
+// season__content-bottom---
+
+.season__content-bottom {
+  padding: 100px 0;
 }

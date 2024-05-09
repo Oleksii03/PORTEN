@@ -158,8 +158,8 @@
 .season__new-collection {
   width: 100%;
 
-  padding-top: calc(40% - 67px);
-  padding-bottom: calc(30% - 67px);
+  padding-top: calc(50% - 67px);
+  padding-bottom: calc(50% - 67px);
 
   background-image: url(../images/season/season-img-top.png);
   background-repeat: no-repeat;
@@ -218,6 +218,8 @@
 
   @media (min-width: 768px) {
     background-size: cover;
+    padding-top: calc(40% - 100px);
+    padding-bottom: calc(30% - 100px);
   }
 
   @media (min-width: 1024px) {

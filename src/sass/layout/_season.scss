@@ -8,7 +8,7 @@
 }
 
 .season__content-top {
-  @media (min-width: 1440px) {
+  @media (min-width: 1700px) {
     display: grid;
     grid-template-columns: repeat(2, 50%);
   }
@@ -69,11 +69,16 @@
 
   overflow-x: auto;
 
-  @media (min-width: 768px) and (max-width: 1439px) {
+  @media (min-width: 768px) {
     overflow: visible;
     justify-content: center;
     column-gap: 10px;
     padding: 0px 0px;
+  }
+
+  @media (min-width: 1024px) and (max-width: 1699px) {
+    column-gap: 50px;
+    padding: 0px
   }
 
   @media (min-width: 1920px) {
@@ -124,14 +129,73 @@
 .season__new-collection {
   height: 730px;
   width: 100%;
+
+  padding-top: 40%;
+
   background-image: url(../images/season/season-img-top.png);
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-size: cover;
+  background-size: contain;
 
-  // @media (min-width: 870px) {
-  //   background-size: cover;
-  // }
+  &-title {
+    position: relative;
+    text-align: center;
+    font-family: "Playfair Display";
+    font-size: 26px;
+
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+
+    margin-bottom: 60px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      height: 1px;
+      background-color: var(--white-base-color);
+    }
+
+    @media (min-width: 768px) {
+      font-size: 36px;
+    }
+  }
+
+  &-btn {
+    color: var(--white-base-color);
+    text-align: center;
+
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+
+    background-color: transparent;
+
+    display: block;
+    margin: 0 auto;
+    padding: 10px 26px;
+    border: 1px solid var(--white-base-color);
+
+    @media (min-width: 768px) {
+      font-size: 18px;
+      padding: 12px 28px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    padding: 484px 100px 100px;
+  }
+
+
+
+  @media (min-width: 768px) {
+    background-size: cover;
+  }
 
   // @media (min-width: 1440px) {
   //   background-size: contain;

@@ -1,25 +1,24 @@
 .season {
   background-color: var(--black-background-color);
 
+  // ::-webkit-scrollbar {
+  //   height: 0px;
+  // }
+
   ::-webkit-scrollbar {
-    height: 0px;
+    height: 3px;
   }
 
-  @media (min-width: 1024px) and (max-width: 1699px) {
-    ::-webkit-scrollbar {
-      height: 3px;
-    }
-
-    ::-webkit-scrollbar-track {
-      background: var(--dark-gray-background-color);
-      border-radius: 8px;
-    }
-
-    ::-webkit-scrollbar-thumb {
-      background-color: var(--white-base-color);
-      border-radius: 8px;
-    }
+  ::-webkit-scrollbar-track {
+    background: var(--dark-gray-background-color);
+    border-radius: 8px;
   }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--white-base-color);
+    border-radius: 8px;
+  }
+
 }
 
 .season__content-top {
@@ -60,7 +59,7 @@
     margin-bottom: 30px;
   }
 
-  @media (min-width: 1920px) {
+  @media (min-width: 1700px) {
     margin-bottom: 100px;
 
     &::before {
@@ -79,6 +78,10 @@
 .watches-list {
   padding: 0px 20px;
 
+  max-width: 280px;
+
+  margin: 0 auto;
+
   scroll-snap-type: x mandatory;
   display: flex;
   align-items: center;
@@ -93,7 +96,7 @@
     justify-content: center;
     column-gap: 10px;
     padding: 0px 0px;
-    width: 300px;
+    max-width: 100%;
     margin: 0 auto;
   }
 
@@ -102,6 +105,7 @@
     justify-content: start;
     column-gap: 50px;
     padding: 0px 50px;
+    max-width: 300px;
   }
 
   @media (min-width: 1920px) {
@@ -114,8 +118,10 @@
   scroll-snap-align: center;
   scroll-snap-stop: always;
 
-  @media (min-width: 1024px) and (max-width: 1699px) {
-    padding-bottom: 30px;
+  padding-bottom: 30px;
+
+  @media (min-width: 1700px) {
+    padding-bottom: 0px;
   }
 }
 

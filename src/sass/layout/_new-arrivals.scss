@@ -1,0 +1,87 @@
+.new-arrivals {
+  background-color: var(--black-background-color);
+  padding-top: 120px;
+  padding-bottom: 150px;
+}
+
+.new-arrivals__title {
+  position: relative;
+
+  text-align: center;
+  font-family: "Playfair Display";
+  font-size: 36px;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+
+  margin-bottom: 121px;
+
+  &::after {
+    content: '';
+
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+
+    width: 120px;
+    height: 1px;
+
+    background-color: var(--white-base-color);
+    transform: translateX(-50%);
+  }
+}
+
+
+.clocks-list {
+  // display: flex;
+  // column-gap: 23px;
+  // row-gap: 40px;
+  // justify-content: center;
+  // flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  column-gap: 23px;
+  row-gap: 40px;
+
+  align-content: center;
+}
+
+.clocks-list__item {
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+
+  // flex-basis: calc((100% - 69px) / 4);
+
+}
+
+.clocks-list__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // max-width: 260px;
+  padding: 27px 22px 34px;
+  margin-bottom: 25px;
+
+  background: #191B1C;
+}
+
+.clocks-list__text {
+  font-family: "Playfair Display";
+  font-size: 18px;
+  line-height: normal;
+
+  margin-bottom: 10px;
+}
+
+.clocks-list__price {
+  color: #D0D0D0;
+  font-family: "Playfair Display";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.clocks-list__img {
+  width: 215px;
+  height: 264px;
+}

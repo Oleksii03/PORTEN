@@ -127,8 +127,6 @@
   display: flex;
   column-gap: 20px;
 
-
-
   &>button {
     display: flex;
     align-items: center;
@@ -142,7 +140,7 @@
     background-color: transparent;
     border: 1px solid var(--white-base-color);
 
-    padding: 5px 18px 10px;
+    padding: 3px 18px 10px;
   }
 
   &__count {

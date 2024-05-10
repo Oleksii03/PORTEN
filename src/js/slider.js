@@ -10,7 +10,6 @@ const btnNext = document.querySelector('.clocks-list__btn-next');
 // ------------------------------------
 
 const offset = sliderLine.scrollWidth / items.length;
-
 const totalItem = items.length - 2;
 
 totalText.textContent = totalItem;

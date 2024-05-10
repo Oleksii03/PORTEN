@@ -56,7 +56,7 @@
 .clocks-list {
   display: flex;
   // column-gap: 20px;
-  // margin-left: -228px;
+  margin-left: -228px;
 
   position: relative;
   left: 0;
@@ -77,10 +77,6 @@
 
 .clocks-list__item {
   padding-right: 20px;
-
-  &:first-child {
-    margin-left: -63.2%;
-  }
 }
 
 

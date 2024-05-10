@@ -49,16 +49,22 @@
   scroll-snap-type: x mandatory;
   overflow-x: auto;
   padding-bottom: 30px;
-  padding-right: 13px;
-  padding-left: 13px;
+  // margin-left: 22px;
+  // padding-left: 53px;
 }
 
 
 .clocks-list {
   display: flex;
-  column-gap: 23px;
+  column-gap: 22px;
 
+  // background-color: #dab525;
 
+  position: relative;
+
+  left: 0;
+
+  transition: all 300ms linear;
 
   // row-gap: 40px;
   // justify-content: center;
@@ -116,13 +122,14 @@
 
 .clocks-list__btn-box {
   display: flex;
-  justify-content: flex-end;
-
-  column-gap: 20px;
+  justify-content: space-between;
 
   margin-top: 30px;
+}
 
-  // padding: 0 5px;
+.btn-box {
+  display: flex;
+  column-gap: 20px;
 
   &>button {
     display: flex;
@@ -134,13 +141,22 @@
 
     line-height: 1;
 
-
-
     background-color: transparent;
     border: 1px solid var(--white-base-color);
 
     padding: 5px 18px 10px;
-
   }
 
+  &__count {
+    font-family: 'Playfair Display';
+    font-size: 38px;
+    line-height: 0.8;
+
+    &>span:nth-child(2) {
+      display: inline-block;
+      font-size: 35px;
+
+      padding: 0px 5px;
+    }
+  }
 }

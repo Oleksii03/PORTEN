@@ -3,9 +3,8 @@
 
     <h2 class="new-arrivals__title">Нові надходження</h2>
 
-    <div class="clocks-list__wrapper">
-
-      <ul class="new-arrivals__list-clocks clocks-list">
+    <div class="clocks-list__wrapper js-wrap-list">
+      <ul class="new-arrivals__list-clocks clocks-list js-clocks-list">
         <li class="clocks-list__item">
           <a class="clocks-list__link" href="#">
             <img class="clocks-list__img" src="./images/wrist-watches/Carl-von-Zeyten.png" alt="watch-1">
@@ -81,9 +80,16 @@
       </ul>
     </div>
 
-    <div class="clocks-list__btn-box">
-      <button>&#10229;</button>
-      <button>&#10230;</button>
+    <div class="clocks-list__btn-box btn-box">
+      <div class="btn-box__count">
+        <span class="js-count">0</span>
+        <span>/</span>
+        <span class="js-total">0</span>
+      </div>
+      <div class="btn-box">
+        <button type="button" class="clocks-list__btn-prev">&#10229;</button>
+        <button type="button" class="clocks-list__btn-next">&#10230;</button>
+      </div>
     </div>
 
   </div>

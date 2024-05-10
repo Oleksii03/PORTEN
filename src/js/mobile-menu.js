@@ -4,8 +4,6 @@ const menu = document.querySelector("[data-menu]");
 
 const backdrop = document.querySelector("[data-backdrop]");
 
-console.log(backdrop);
-
 openMenuBtn.addEventListener("click", toggleMenu);
 closeMenuBtn.addEventListener("click", toggleMenu);
 

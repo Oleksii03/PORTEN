@@ -4,6 +4,9 @@ const items = document.querySelectorAll('.js-clocks-list > li');
 const totalText = document.querySelector('.js-total');
 const countText = document.querySelector('.js-count');
 
+const btnPrev = document.querySelector('.clocks-list__btn-prev');
+const btnNext = document.querySelector('.clocks-list__btn-next');
+
 
 const totalItem = items.length;
 
@@ -14,24 +17,45 @@ let count = 1;
 
 countText.textContent = count;
 
-document.querySelector('.clocks-list__btn-next').addEventListener('click', (e) => {
+btnNext.addEventListener('click', increment);
 
-  if (count >= totalItem) {
-    e.currentTarget.disabled = true;
-    e.currentTarget.style.opacity = 0.3;
-    return;
-  }
 
+function increment (e) {
   count += 1;
 
   width += 282;
   sliderLine.style.left = -width + 'px';
   countText.textContent = count;
-});
 
-document.querySelector('.clocks-list__btn-prev').addEventListener('click', (e) => {
+  if (count >= totalItem) {
+    e.currentTarget.disabled = true;
+    e.currentTarget.style.opacity = 0.3;
+    return;
+  } else {
+    btnPrev.disabled = false;
+    btnPrev.style.opacity = 1;
+    return;
+  }
+}
+
+btnPrev.addEventListener('click', decrement);
+
+function decrement (e) {
+
   count -= 1;
+
   width -= 282;
   sliderLine.style.left = -width + 'px';
   countText.textContent = count;
-});
+
+  if (count <= 1) {
+    btnPrev.disabled = true;
+    btnPrev.style.opacity = 0.3;
+    return;
+  } else {
+    btnNext.disabled = false;
+    btnNext.style.opacity = 1;
+    return;
+  }
+}
+

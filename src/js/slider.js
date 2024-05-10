@@ -7,8 +7,13 @@ const countText = document.querySelector('.js-count');
 const btnPrev = document.querySelector('.clocks-list__btn-prev');
 const btnNext = document.querySelector('.clocks-list__btn-next');
 
+// ------------------------------------
 
-const totalItem = items.length;
+const offset = sliderLine.scrollWidth / items.length - 2;
+
+console.log(offset);
+
+const totalItem = items.length - 2;
 
 totalText.textContent = totalItem;
 
@@ -23,13 +28,14 @@ btnNext.addEventListener('click', increment);
 function increment (e) {
   count += 1;
 
-  width += 282;
+  width += 279;
+
   sliderLine.style.left = -width + 'px';
   countText.textContent = count;
 
-  if (count >= totalItem) {
-    e.currentTarget.disabled = true;
-    e.currentTarget.style.opacity = 0.3;
+  if (count >= items.length - 2) {
+    btnNext.disabled = true;
+    btnNext.style.opacity = 0.3;
     return;
   } else {
     btnPrev.disabled = false;
@@ -44,7 +50,7 @@ function decrement (e) {
 
   count -= 1;
 
-  width -= 282;
+  width -= 279;
   sliderLine.style.left = -width + 'px';
   countText.textContent = count;
 

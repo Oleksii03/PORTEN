@@ -9,9 +9,7 @@ const btnNext = document.querySelector('.clocks-list__btn-next');
 
 // ------------------------------------
 
-const offset = sliderLine.scrollWidth / items.length - 2;
-
-console.log(offset);
+const offset = sliderLine.scrollWidth / items.length;
 
 const totalItem = items.length - 2;
 
@@ -22,13 +20,13 @@ let count = 1;
 
 countText.textContent = count;
 
-btnNext.addEventListener('click', increment);
 
+btnNext.addEventListener('click', increment);
 
 function increment (e) {
   count += 1;
 
-  width += 279;
+  width += offset;
 
   sliderLine.style.left = -width + 'px';
   countText.textContent = count;
@@ -50,7 +48,7 @@ function decrement (e) {
 
   count -= 1;
 
-  width -= 279;
+  width -= offset;
   sliderLine.style.left = -width + 'px';
   countText.textContent = count;
 

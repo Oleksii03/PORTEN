@@ -2,6 +2,20 @@
   background-color: var(--black-background-color);
   padding-top: 120px;
   padding-bottom: 150px;
+
+  ::-webkit-scrollbar {
+    height: 2px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--dark-gray-background-color);
+    border-radius: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--white-base-color);
+    border-radius: 8px;
+  }
 }
 
 .new-arrivals__title {
@@ -31,34 +45,48 @@
   }
 }
 
+.clocks-list__wrapper {
+  scroll-snap-type: x mandatory;
+  overflow-x: auto;
+  padding-bottom: 30px;
+  padding-right: 13px;
+  padding-left: 13px;
+}
+
 
 .clocks-list {
-  // display: flex;
-  // column-gap: 23px;
+  display: flex;
+  column-gap: 23px;
+
+
+
   // row-gap: 40px;
   // justify-content: center;
   // flex-wrap: wrap;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  column-gap: 23px;
-  row-gap: 40px;
 
-  align-content: center;
+  // display: grid;
+  // grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  // column-gap: 23px;
+  // row-gap: 40px;
+
+
 }
 
 .clocks-list__item {
   scroll-snap-align: center;
   scroll-snap-stop: always;
+  // margin: 0 auto;
 
   // flex-basis: calc((100% - 69px) / 4);
 
 }
 
 .clocks-list__link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  // max-width: 260px;
+  display: block;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  max-width: 260px;
   padding: 27px 22px 34px;
   margin-bottom: 25px;
 
@@ -84,4 +112,29 @@
 .clocks-list__img {
   width: 215px;
   height: 264px;
+}
+
+.clocks-list__btn-box {
+  display: flex;
+  justify-content: space-between;
+
+  &>button {
+    display: flex;
+    align-items: center;
+    color: (var(--white-base-color));
+    text-align: center;
+    font-family: "PT Sans";
+    font-size: 28px;
+
+    line-height: 1;
+
+
+
+    background-color: transparent;
+    border: 1px solid var(--white-base-color);
+
+    padding: 5px 18px 10px;
+
+  }
+
 }

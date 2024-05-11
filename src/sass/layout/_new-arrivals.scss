@@ -80,7 +80,6 @@
 }
 
 
-
 .clocks-list__link {
   display: block;
   max-width: 260px;
@@ -109,6 +108,42 @@
 .clocks-list__img {
   width: 215px;
   height: 264px;
+}
+
+.clocks-list__item_blur {
+  position: relative;
+}
+
+.clocks-list__link_blur {
+  padding: 0;
+  background-image: url(../images/wrist-watches/JORD-AR5905.png);
+  // backdrop-filter: blur(5%);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  width: 279px;
+  height: 325px;
+  filter: blur(2px);
+}
+
+.clocks-list__text_blur {
+  position: absolute;
+  top: 135px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  text-align: center;
+  font-family: "Playfair Display";
+  font-size: 18px;
+
+  font-weight: 400;
+  line-height: normal;
+
+  padding: 12px 28px;
+
+  border: 1px solid #FFF;
+
+  width: 200px;
 }
 
 .clocks-list__btn-box {

@@ -235,8 +235,6 @@
 // --season__content-bottom---
 
 .season__content-bottom {
-  padding-bottom: 100px;
-
   @media (min-width: 768px) {
     display: grid;
     grid-template-columns: repeat(2, 50%);

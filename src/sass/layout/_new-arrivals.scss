@@ -1,7 +1,7 @@
 .new-arrivals {
   background-color: var(--black-background-color);
-  padding-top: 120px;
-  padding-bottom: 150px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 
   ::-webkit-scrollbar {
     height: 2px;
@@ -16,6 +16,11 @@
     background-color: var(--white-base-color);
     border-radius: 8px;
   }
+
+  @media (min-width: 1440px) {
+    padding-top: 120px;
+    padding-bottom: 150px;
+  }
 }
 
 .new-arrivals__title {
@@ -23,32 +28,40 @@
 
   text-align: center;
   font-family: "Playfair Display";
-  font-size: 36px;
+  font-size: 26px;
   font-weight: 700;
   line-height: normal;
   text-transform: uppercase;
 
-  margin-bottom: 121px;
+  margin-bottom: 50px;
 
-  &::after {
-    content: '';
 
-    position: absolute;
-    bottom: -40px;
-    left: 50%;
+  @media (min-width: 768px) {
+    font-size: 36px;
+    margin-bottom: 80px;
+  }
 
-    width: 120px;
-    height: 1px;
+  @media (min-width: 1440px) {
+    margin-bottom: 121px;
 
-    background-color: var(--white-base-color);
-    transform: translateX(-50%);
+    &::after {
+      content: '';
+
+      position: absolute;
+      bottom: -40px;
+      left: 50%;
+
+      width: 120px;
+      height: 1px;
+
+      background-color: var(--white-base-color);
+      transform: translateX(-50%);
+    }
   }
 }
 
 .clocks-list__wrapper {
-  // scroll-snap-type: x mandatory;
   overflow-x: hidden;
-  // padding-left: 51px;
   padding-bottom: 25px;
 }
 
@@ -72,11 +85,30 @@
   // column-gap: 23px;
   // row-gap: 40px;
 
+  @media (min-width: 768px) {
+    margin-left: 0px;
+  }
 
+  @media (min-width: 1024px) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    column-gap: 23px;
+    row-gap: 40px;
+  }
 }
 
 .clocks-list__item {
   padding-right: 20px;
+
+  @media (min-width: 768px) {
+    &:first-child {
+      display: none;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    padding-right: 0px;
+  }
 }
 
 
@@ -87,6 +119,10 @@
   margin-bottom: 25px;
 
   background: #191B1C;
+
+  @media (min-width: 1024px) {
+    max-width: 100%;
+  }
 }
 
 .clocks-list__text {
@@ -108,20 +144,22 @@
 .clocks-list__img {
   width: 215px;
   height: 264px;
+
+  @media (min-width: 768px) {
+    width: 194px;
+    height: auto;
+  }
+
+  @media (min-width: 1024px) {
+    margin: 0 auto;
+  }
 }
 
 .clocks-list__item_blur {
   position: relative;
 }
 
-.clocks-list__link_blur {
-  padding: 0;
-  background-image: url(../images/wrist-watches/JORD-AR5905.png);
-  // backdrop-filter: blur(5%);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  width: 279px;
-  height: 325px;
+.clocks-list__img_blur {
   filter: blur(2px);
 }
 
@@ -130,7 +168,7 @@
   top: 135px;
   left: 50%;
 
-  transform: translateX(-50%);
+  transform: translateX(-55%);
 
   text-align: center;
   font-family: "Playfair Display";
@@ -143,7 +181,7 @@
 
   border: 1px solid #FFF;
 
-  width: 200px;
+  width: 190px;
 }
 
 .clocks-list__btn-box {
@@ -152,6 +190,15 @@
 
   margin-top: 30px;
   padding: 0 10px;
+
+  @media (min-width: 768px) {
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  @media (min-width: 1024px) {
+    display: none;
+  }
 }
 
 .btn-box {
@@ -172,6 +219,10 @@
     border: 1px solid var(--white-base-color);
 
     padding: 3px 18px 10px;
+
+    @media (min-width: 768px) {
+      padding: 3px 28px 10px;
+    }
   }
 
   &__count {
@@ -185,5 +236,13 @@
 
       padding: 0px 5px;
     }
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  @media (min-width: 768px) {
+    column-gap: 35px;
   }
 }

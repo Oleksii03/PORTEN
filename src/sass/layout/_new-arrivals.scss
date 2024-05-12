@@ -151,6 +151,7 @@
   }
 
   @media (min-width: 1024px) {
+    width: 100%;
     margin: 0 auto;
   }
 }
@@ -182,6 +183,15 @@
   border: 1px solid #FFF;
 
   width: 190px;
+
+  @media (min-width: 1024px) {
+    top: 175px;
+    transform: translateX(-50%);
+  }
+
+  @media (min-width: 1440px) {
+    top: 138px;
+  }
 }
 
 .clocks-list__btn-box {

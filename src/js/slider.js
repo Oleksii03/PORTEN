@@ -10,8 +10,10 @@ const btnNext = document.querySelector('.clocks-list__btn-next');
 // -----------/-refs------------------------
 
 let width = 0;
-let count = 0;
-let offset = 0;
+let count = 1;
+let offset = sliderLine.scrollWidth / items.length;
+
+console.log(offset);
 
 const totalItem = items.length - 1;
 
@@ -46,6 +48,8 @@ function init () {
 }
 
 init();
+
+countText.textContent = count;
 
 
 btnNext.addEventListener('click', increment);

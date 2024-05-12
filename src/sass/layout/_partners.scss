@@ -27,6 +27,17 @@
 
   margin-bottom: 50px;
 
+  &::before {
+    content: " ";
+    width: 120px;
+    height: 1px;
+    background-color: var(--white-base-color);
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   @media (min-width: 768px) {
     font-size: 36px;
   }

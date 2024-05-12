@@ -4,8 +4,27 @@
 }
 
 .content-information__item {
-  &:not(:last-child) {
+  posi &:not(:last-child) {
     margin-bottom: 35px;
+  }
+
+  @media (max-width: 767px) {
+    &:last-child {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+
+        transform: translateX(-50%);
+
+        width: 80px;
+        height: 1px;
+        background-color: var(--white-base-color);
+      }
+    }
   }
 }
 

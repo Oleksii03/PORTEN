@@ -216,9 +216,17 @@
     padding: 10px 26px;
     border: 1px solid var(--white-base-color);
 
+    transition: background-color 250ms linear;
+
     @media (min-width: 768px) {
       font-size: 18px;
       padding: 12px 28px;
+    }
+
+    @media (min-width: 1024px) {
+      &:hover {
+        background-color: #1F1F1F;
+      }
     }
   }
 
@@ -361,8 +369,16 @@
   background-color: transparent;
   border: 1px solid var(--white-base-color);
 
+  transition: background-color 250ms linear;
+
   @media (min-width: 768px) {
     font-size: 18px;
     padding: 12px 28px;
+  }
+
+  @media (min-width: 1024px) {
+    &:hover {
+      background-color: #1F1F1F;
+    }
   }
 }

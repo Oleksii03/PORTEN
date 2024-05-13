@@ -1,0 +1,90 @@
+.box {
+  position: relative;
+  margin-bottom: 12px;
+
+  border-radius: 4px;
+  background-color: rgba(81, 79, 79, 0.847);
+
+  overflow: hidden;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.label {
+  position: relative;
+  padding: 16px;
+  font-size: 20px;
+  letter-spacing: -0.8px;
+  line-height: 140%;
+
+  font-family: "Playfair Display";
+  font-size: 18px;
+
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  &>svg {
+    pointer-events: none;
+    position: absolute;
+    top: 35%;
+    right: 16px;
+    transform-origin: center center;
+
+    transition: all 300ms ease-in-out;
+    width: 30px;
+
+    @media (min-width: 768px) {
+      top: 30%;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    font-size: 24px;
+  }
+}
+
+.content {
+  position: relative;
+
+  font-weight: 400;
+  line-height: 125%;
+
+  overflow: hidden;
+  max-height: 0;
+
+  transition: all 300ms ease-in-out;
+}
+
+.content__text {
+  padding: 16px;
+
+  border: 1px solid rgba(81, 79, 79, 0.847);
+  border-top: none;
+}
+
+
+.active>.label {
+  color: var(--white-base-color);
+  background: rgba(81, 79, 79, 0.847);
+
+  &>svg {
+    transform: rotate(180deg);
+  }
+
+  &~.content {
+    color: var(--white-base-color);
+    background: var(--dark-gray-background-color);
+
+    font-weight: 400;
+    line-height: 125%;
+
+    &>p {
+      opacity: 0.8;
+    }
+  }
+}

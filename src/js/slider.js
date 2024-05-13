@@ -1,6 +1,8 @@
 const sliderLine = document.querySelector('.js-clocks-list');
 const items = document.querySelectorAll('.js-clocks-list > li');
 
+const wrapList = document.querySelector('.js-wrap-list');
+
 const totalText = document.querySelector('.js-total');
 const countText = document.querySelector('.js-count');
 
@@ -11,46 +13,42 @@ const btnNext = document.querySelector('.clocks-list__btn-next');
 
 let width = 0;
 let count = 1;
-let offset = sliderLine.scrollWidth / items.length;
-
-console.log(offset);
+let offset = 0;
 
 const totalItem = items.length - 1;
 
 totalText.textContent = totalItem;
 
-window.addEventListener('resize', init);
+const resizeObserver = new ResizeObserver((entries, observer) => {
+  entries.forEach((entry) => {
+    const container = entry.borderBoxSize[0].inlineSize;
 
-function init () {
-  const container = document.querySelector('.cont-r').offsetWidth;
+    width = 0;
 
-  width = 0;
+    if (container < 760) {
+      offset = sliderLine.scrollWidth / items.length;
+    } else {
+      offset = sliderLine.scrollWidth / (items.length - 1);
+    }
 
-  if (container < 760) {
-    offset = sliderLine.scrollWidth / items.length;
-    console.log(offset);
-  } else {
-    offset = sliderLine.scrollWidth / (items.length - 1);
-    console.log(offset);
-  }
+    sliderLine.style.left = 0 + 'px';
+    count = 1;
 
-  sliderLine.style.left = 0 + 'px';
-  count = 1;
+    if (count <= 1) {
+      btnPrev.disabled = true;
+      btnPrev.style.opacity = 0.3;
+      btnNext.disabled = false;
+      btnNext.style.opacity = 1;
+      countText.textContent = count;
+      return;
+    }
+  });
+});
 
-  if (count <= 1) {
-    btnPrev.disabled = true;
-    btnPrev.style.opacity = 0.3;
-    btnNext.disabled = false;
-    btnNext.style.opacity = 1;
-    countText.textContent = count;
-    return;
-  }
-}
+resizeObserver.observe(wrapList);
 
-init();
 
 countText.textContent = count;
-
 
 btnNext.addEventListener('click', increment);
 

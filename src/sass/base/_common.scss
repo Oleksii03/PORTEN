@@ -1,36 +1,5 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
 
-// -----------------------------------
-// * {
-//   overscroll-behavior: none;
-// }
-
-// ::-webkit-scrollbar {
-//   width: 0px;
-// }
-
-// @media (min-width: 1200px) {
-//   ::-webkit-scrollbar {
-//     width: 12px;
-//   }
-
-//   ::-webkit-scrollbar-track {
-//     background: var(--black-background-color);
-//   }
-
-//   ::-webkit-scrollbar-thumb {
-//     background-color: #e2ae1057;
-//     border-radius: 16px;
-//     border: 5px solid var(--black-background-color);
-//   }
-// }
-
-// ----------------------------------------
-
-@font-face {
-  font-family: "Post No Bills Jaffna";
-  src: url(../fonts/PostNoBillsJaffna-Bold.woff);
-}
 
 html {
   scroll-behavior: smooth;
@@ -73,6 +42,11 @@ p {
   margin: 0;
 }
 
+
+@font-face {
+  font-family: "Post No Bills Jaffna";
+  src: url(../fonts/PostNoBillsJaffna-Bold.woff);
+}
 
 .wrapper {
   max-width: 1920px;

@@ -1,4 +1,4 @@
-const accordion = document.querySelector('.accordion');
+const accordion = document.querySelector('.js-accordion');
 
 accordion.addEventListener('click', onOpenAccordionClick);
 

@@ -7,25 +7,6 @@
   &:not(:last-child) {
     margin-bottom: 35px;
   }
-
-  // @media (max-width: 767px) {
-  //   &:last-child {
-  //     position: relative;
-
-  //     &::before {
-  //       content: "";
-  //       position: absolute;
-  //       bottom: -5px;
-  //       left: 50%;
-
-  //       transform: translateX(-50%);
-
-  //       width: 80px;
-  //       height: 1px;
-  //       background-color: var(--white-base-color);
-  //     }
-  //   }
-  // }
 }
 
 .useful-information__title {
@@ -152,12 +133,15 @@
 
   transition: all 250ms linear;
 
-  &:hover {
-    background-color: rgb(54, 57, 59);
-  }
 
   @media (min-width: 665px) {
     margin-bottom: 0px;
+  }
+
+  @media (min-width: 1440px) {
+    &:hover {
+      background-color: rgb(54, 57, 59);
+    }
   }
 }
 
@@ -178,16 +162,18 @@
 
     transition: all 250ms linear;
 
-    &:hover {
-      color: rgb(54, 57, 59);
-    }
-
     &:first-child {
       margin-left: auto;
     }
 
     &:last-child {
       margin-left: auto;
+    }
+
+    @media (min-width: 1440px) {
+      &:hover {
+        color: rgb(54, 57, 59);
+      }
     }
   }
 

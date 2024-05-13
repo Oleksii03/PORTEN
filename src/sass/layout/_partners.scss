@@ -42,19 +42,12 @@
     font-size: 36px;
   }
 
+  @media (min-width: 910px) {
+    margin-bottom: 80px;
+  }
+
   @media (min-width: 1440px) {
     margin-bottom: 90px;
-
-    &::before {
-      content: " ";
-      width: 120px;
-      height: 1px;
-      background-color: var(--white-base-color);
-      position: absolute;
-      bottom: -40px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
   }
 }
 
@@ -69,4 +62,10 @@
   grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   align-items: center;
   gap: 30px;
+}
+
+.partners__img {
+  @media (max-width: 1024px) {
+    aspect-ratio: 6/2;
+  }
 }

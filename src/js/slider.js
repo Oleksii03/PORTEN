@@ -25,7 +25,7 @@ const resizeObserver = new ResizeObserver((entries, observer) => {
 
     width = 0;
 
-    if (container < 760) {
+    if (container < 750) {
       offset = sliderLine.scrollWidth / items.length;
     } else {
       offset = sliderLine.scrollWidth / (items.length - 1);

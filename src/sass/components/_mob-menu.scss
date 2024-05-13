@@ -1,9 +1,3 @@
-// .mob-menu__wrapper {
-//   @media (min-width: 768px) {
-//     display: none;
-//   }
-// }
-
 .mob-menu {
   width: 100vw;
   height: 100dvh;
@@ -17,6 +11,8 @@
   transition: all 300ms ease-in-out;
 
   transform: translateX(100%);
+
+  opacity: 0;
 }
 
 .mob-menu_flex {
@@ -101,4 +97,5 @@
 
 .mob-menu.is-hidden {
   transform: translateX(0%);
+  opacity: 0.99;
 }

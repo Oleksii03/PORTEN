@@ -67,5 +67,7 @@
 .partners__img {
   @media (max-width: 1024px) {
     aspect-ratio: 6/3;
+    max-width: 300px;
+    margin: 0 auto;
   }
 }
